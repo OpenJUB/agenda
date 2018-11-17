@@ -1,3 +1,13 @@
 AGENDA
 
 Prototype for agenda management system for USG meetings.
+
+Development Setup
+-----------------
+- Ensure you have Python 3.5 installed and set it as default
+- Create virtual environment: `virtualenv venv`
+- Launch the environment: `source venv/bin/activate`
+- Install the requirements: `pip install -r requirements.txt`
+- Migrate and sync the database: `python manage.py migrate --run-syncdb`
+- Run the server: `python manage.py runserver`
+- The project should now be deployed at `localhost:8000`
