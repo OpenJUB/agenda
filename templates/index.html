@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block mainContent %}
+    <div class="agenda">
+        <p>Agenda</p>
+
+        <!-- agenda items get added here -->
+
+        <form method="post">
+            {% csrf_token %}
+            <input name='addItem' class="form-control" rows="40">
+        </form>
+    </div>
+
+    <!-- existing agenda items show up here -->
+    <div class="textboxes">
+        {% block agendaItems %}
+            <ul>
+                {% for item in agendaItems %}
+                    <li> {{ item.text }} </li>
+                {% endfor %}
+            </ul>
+        {% endblock %}
+    </div>
+{% endblock %}

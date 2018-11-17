@@ -1,0 +1,34 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}USG - Agenda{% endblock %}</title>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="{% static 'img/jub.ico' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    {% block head %}
+    {% endblock %}
+</head>
+
+<div class="header">
+    <img src="{% static 'img/usg.png' %}" class="usg-icon">
+    <p class="usg-name">Undergraduate Student Goverment</p>
+</div>
+
+<main class="main">
+    {% block mainContent %}
+    {% endblock %}
+</main>
+
+<div class="footer">
+    <a href="https://github.com/OpenJUB/agenda"><img src="{% static 'img/github.png' %}" class="github"></a>
+    <div class="footer-text">
+        <a href="mailto:"> Mihail Tarigradschi </a> <br>
+        <a href="mailto:"> Fezi Manana </a> <br>
+        <a href="mailto:t.begeyev@jacobs-university.de"> Taiyr Begeyev </a>
+    </div>
+</div>
+
+</body>
+</html>
